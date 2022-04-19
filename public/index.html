@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Calendar</title>
+</head>
+
+<body class="bg-secondary">
+    <main>
+        <section class="p-2 rounded bg-dark">
+            <h1 class="jumbotron bg-primary text-dark rounded text-center p-5">Current Week Events</h1>
+            <br>
+            <form class="form ">
+                <div class="form-group text-light">
+                    <label for="taskName" class="form-label">Task Name</label>
+                    <input type="text" id="taskName" class="form-control">
+                </div>
+                <div class="form-group text-light">
+                    <label for="taskName" class="form-label">Day Of The Week</label>
+                    <select id="taskDay" class="form-select-lg form-select">
+                        <option value="sunday" selected>Sunday</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                    </select>
+                </div>
+                <br>
+                <button id="addButton" type="button" class="btn btn-primary">Add Task</button>
+            </form>
+            <br>
+            <form class="form text-light">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="businessDays">
+                    <label class="form-check-label" for="businessDays">
+                  Business Days Only
+                </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="showWeekends" checked>
+                    <label class="form-check-label" for="showWeekends">
+                  Show Weekends
+                </label>
+                </div>
+            </form>
+        </section>
+        <br>
+        <section class="p-2 rounded bg-dark">
+            <br>
+            <h1 class="text-light">Tasks</h1>
+            <div class="table-responsive rounded">
+                <table class="table text-wrap table-bordered table-info rounded table-striped table-hover">
+                    <caption>A table showing the days of the week and the corresponding tasks</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col" class="weekend">Sunday</th>
+                            <th scope="col">Monday</th>
+                            <th scope="col">Tuesday</th>
+                            <th scope="col">Wednesday</th>
+                            <th scope="col">Thursday</th>
+                            <th scope="col">Friday</th>
+                            <th scope="col" class="weekend">Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-break text-wrap">
+                        <tr>
+                            <th scope="row">List Of Tasks</th>
+                            <td class="weekend">
+                                <!-- <p>Tasks</p> -->
+                                <ol id="sundayTasks">
+                                </ol>
+                            </td>
+                            <td>
+                                <!-- <p>Tasks</p> -->
+                                <ol id="mondayTasks">
+                                </ol>
+                            </td>
+                            <td>
+                                <!-- <p>Tasks</p> -->
+                                <ol id="tuesdayTasks">
+                                </ol>
+                            </td>
+                            <td>
+                                <!-- <p>Tasks</p> -->
+                                <ol id="wednesdayTasks">
+                                </ol>
+                            </td>
+                            <td>
+                                <!-- <p>Tasks</p> -->
+                                <ol id="thursdayTasks">
+                                </ol>
+                            </td>
+                            <td>
+                                <!-- <p>Tasks</p> -->
+                                <ol id="fridayTasks">
+                                </ol>
+                            </td>
+                            <td class="weekend">
+                                <!-- <p>Tasks</p> -->
+                                <ol id="saturdayTasks">
+                                </ol>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <button id="resetButton" type="button" class="btn btn-outline-danger">Reset Tasks</button>
+            <br>
+            <br>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.47/system.js" integrity="sha512-mkBpeD76fJnxFHGZstCL0mPCW6E3RFtUzfp5Ye8oQg2rxQNHy4BgHsbmvSizsq3fgF4PGozPI1BzGCB/h1Yq5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        System.defaultJSExtensions = true;
+        System.import("index");
+    </script>
+</body>
+
+</html>

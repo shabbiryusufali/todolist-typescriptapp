@@ -1,0 +1,10 @@
+{
+    "devDependencies": {
+        "typescript": "^4.6.3"
+    },
+    "scripts": {
+        "start": "node build/index.js",
+        "build": "tsc",
+        "postinstall": "npm run build"
+    }
+}

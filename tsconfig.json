@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "experimentalDecorators": true,
+      "target": "es6",
+      "strict": true,
+      // "watch": true,
+      "module" : "system",
+      "outDir": "public"
+  },
+  "file": ["src/*","index.ts"]
+}
